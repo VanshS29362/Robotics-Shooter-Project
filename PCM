@@ -1,0 +1,28 @@
+package pcmrobot;
+
+public class Solenoid {
+	public static void DoubleSolenoid (String[] args)
+	{
+		DoubleSolenoid exampleDouble = new DoubleSolenoid(1, 2);
+
+		exampleDouble.set(DoubleSolenoid.Value.kOff);
+		exampleDouble.set(DoubleSolenoid.Value.kForward);
+		exampleDouble.set(DoubleSolenoid.Value.kReverse);
+		
+	}
+	public static void Compressor (String[] args) 
+	{
+		Compressor c = new Compressor(0);
+
+		c.setClosedLoopControl(true);
+		c.setClosedLoopControl(false);
+	}
+	
+	public static void Status (String[] args)
+	{
+		boolean enabled = c.enabled();
+		boolean pressureSwitch = c.getPressureSwitchValue();
+		double current = c.getCompressorCurrent();
+	}
+	
+}
